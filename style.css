@@ -1,0 +1,369 @@
+body {
+    height: 100%;
+    font: 14px "Monospace", "courier new", courier, sans-serif;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: goldenrod;
+  }
+  
+  /* ///////// NAVABAR //////////// */
+  
+  .navbar{
+    position: fixed;
+    z-index: 10;
+    /* overflow: hidden; */
+    width: 100%;
+    background-color: goldenrod;
+    padding: 10px;
+  }
+  
+  .nomdusite{
+    float: right;
+    font-size: 20px;
+    list-style-type: none;
+    margin-right: 5px;
+  }
+  
+  .nomdusite a:hover{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 22px;
+  }
+  
+  .menuToggle{
+    display: block;
+    position: relative;
+    top: 0px;
+    left: 25px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  .menuToggle input{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+  
+  .menuToggle span{
+    display: block;
+    width: 35px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: gray;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  .menuToggle span:first-child{
+    transform-origin: 0% 0%;
+  }
+  
+  .menuToggle span:nth-last-child(2){
+    transform-origin: 0% 100%;
+  }
+  
+  .menuToggle input:checked ~ span{
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+  
+  .menuToggle input:checked ~ span:nth-last-child(3){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  .menuToggle input:checked ~ span:nth-last-child(2){
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+  .menu{
+    position: absolute;
+    border-radius: 15px;
+    width: 250px;
+    margin: -100px 0 0 -50px;
+    padding: 40px;
+    padding-top: 125px;
+    
+    background: rgba(128, 128, 128, 0.8);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+  
+  .menu:hover{
+    background-color: gray;
+  }
+  
+  nav li{
+    padding: 5px;
+    font-size: 20px;
+  }
+  
+  .menuToggle input:checked ~ ul{
+    transform: none;
+  }
+  
+  /* ///////// HEADER //////////// */
+  
+  .carousel-inner{
+    height: auto;
+  }
+  
+  header{
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding-top: 60px;
+  }
+  
+  /* ///////// SECTIONS - fellows //////////// */
+  
+  #fellows{
+    margin: 25px;
+  }
+  
+  .small{
+    font-size: small;
+  }
+  
+  .fellows{
+    margin-top: 30px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .fellows .card{
+    align-content: center;
+  }
+  
+  .caption1 h3{
+    color:black;
+    font-size: 5em;
+    text-align: center;
+    margin-top: 90px;
+  }
+  
+  .fellows .card:hover .caption1 h3{
+    color:orangered;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 5em;
+    text-align: center;
+    margin-top: 90px;
+  }
+  
+  .fellows .card:hover .caption p{
+    opacity: 0;
+  }
+  
+  .fellows .card:hover img{
+    opacity: 1;
+  }
+  
+  .fellows .card:hover h3{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 30px;
+  }
+  
+  .fellows .card img{
+    align-content: center;
+    opacity: 0.5;
+    height: 20em;
+    width: 300px;
+    border-radius: 5px;
+  }
+  
+  .caption p{
+    background-color: rgba(245, 245, 245, 0.7);
+    color: black;
+    font-size: 28px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  
+  .caption p span{
+    color: orangered;
+    font-weight: bolder;
+  }
+  
+  .caption h3{
+    color: white;
+    margin-bottom: 20em;
+    font-size: 55px;
+    text-align: center;
+  }
+  
+  .button{
+    font-variant: small-caps;
+    padding: 5px 15px 5px 15px;
+    margin: 2px;
+    border-radius: 5px;
+    background-color: transparent;
+  }
+  
+  .button:hover{
+    font-variant: small-caps;
+    padding: 5px 15px 5px 15px;
+    margin: 2px;
+    border-radius: 10px;
+    background-color: goldenrod;
+  }
+  
+  h5{
+    padding: 10px;
+    font-variant: small-caps;
+    text-align: center;
+    text-decoration: underline;
+  }
+  
+  /* ///////// SECTIONS - reward //////////// */
+  
+  .text{
+    text-align: center;
+  }
+  
+  .reward{
+    height: 15em;
+    width: 15em;
+  }
+  
+  /* ///////// SECTIONS - hunter //////////// */
+  
+  .rounded{
+    border-radius: 100%
+  }
+  
+  .hunter{
+    border-radius: 100px;
+    vertical-align: middle;
+    margin-bottom: 0.75em;
+  }
+  
+  .text{
+    text-align: center;
+    float: right;
+  }
+  .text button{
+    background-color: lightslategray;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .text button:hover{
+    background-color: goldenrod;
+  }
+  
+  /* ///////// SECTIONS - ring //////////// */
+  
+  .cadre{
+    background-color: rgba(192, 192, 192, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  table{
+    margin: 0px 0px 20px 0px;
+    text-align: center;
+    background-color: white;
+  }
+  th{
+    font-variant: small-caps;
+  }
+  th, td{
+    padding: 5px;
+  }
+  tr:hover{
+    background-color: silver;
+  }
+  
+  .gollum{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10em;
+    /* border-radius: 100px; */
+  }
+  
+  .precious{
+    text-align: center;
+  }
+  
+  /* ///////// SECTIONS - army //////////// */
+  
+  /* Same as Reward */
+  
+  /* ///////// SECTIONS - contact //////////// */
+  
+  .radio{
+    margin: 10px 0px 15px 0px;
+  }
+  
+  .form-check{
+    margin: 5px;
+  }
+  
+  /* ///////// FOOTER //////////// */
+  
+  .listfooter{
+    text-align: center;
+    list-style-type: none;
+  }
+  
+  .linkfooter{
+    margin: 10px;
+    font-variant: small-caps;
+    font-size: 15px;
+  }
+  
+  .linkfooter:hover{
+    margin: 10px;
+    padding: 0px 15px 0px 15px;
+    font-variant: small-caps;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  
+  #foot{
+    background-color: silver;
+    padding: 10px;
+    align-items: center;
+    color: white;
+    border-style: outset;
+    border-color: goldenrod;
+  }
