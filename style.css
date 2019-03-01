@@ -1,20 +1,20 @@
 @font-face{
   font-family: Text;
-  src: url("/font/tngan.ttf");
+  src: url("font/tngan.ttf");
 }
 
 @font-face{
   font-family: Symbole;
-  src: url("/font/partybusiness.ttf");
+  src: url("font/partybusiness.ttf");
 }
 
 @font-face{
   font-family: Titre;
-  src: url("/font/anicb.ttf");
+  src: url("font/anicb.ttf");
 }
 
 body {
-  background-image: url("/images/bg_dark.png");
+  background-image: url("images/bg_dark.png");
   height: 100%;
   font-family: Text;
 }
@@ -172,7 +172,7 @@ header{
 /* ///////// SECTIONS - fellows //////////// */
 
 #fellows{
-  background-image: url("/images/bg_light.png");
+  background-image: url("images/bg_light.png");
   font-family: Titre;
 }
 
@@ -341,7 +341,7 @@ h5{
 /* ///////// SECTIONS - hunter //////////// */
 
 #hunters{
-  background-image: url("/images/bg_light.png");
+  background-image: url("images/bg_light.png");
   padding: 10px 0px 10px 0px;
 }
 
@@ -433,7 +433,7 @@ tr:hover{
 /* ///////// SECTIONS - army //////////// */
 
 #army{
-  background-image: url("/images/bg_light.png");
+  background-image: url("images/bg_light.png");
   padding: 50px 20px 50px 20px;
   color: bisque;
   text-align: left;
@@ -448,7 +448,7 @@ tr:hover{
 }
 
 #army .back{
-  background-image: url("/images/weneedyou-1.png");
+  background-image: url("images/weneedyou-1.png");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; 
